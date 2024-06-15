@@ -1,0 +1,33 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+   <form action="" method="POST">
+            {% csrf_token %}
+              <h4>Название книги</h4>
+            <input type="text" placeholder="Название" name="book_name">
+            <br><br>
+            <h4>Описание книги</h4>
+            <textarea name="book_description" id="" cols="30" rows="10" placeholder="Описание"></textarea><br><br>
+            <h4>Автор</h4>
+            <select name="book_author" id="">
+                {% for author in authors %}
+                    <option>{{ author.name }}</option>
+                {% endfor %}
+
+            </select>
+            <br><br>
+            <h4>Категория</h4>
+       <select name="book_category" id="">
+           {% for category in categories %}
+               <option>{{ category.name }}</option>
+           {% endfor %}
+
+       </select>
+       <br><br>
+            <button style="width: 120px; height: 50px; padding: 10px; border-radius: 25px;">Добавить</button>
+
+        </form>
+
+
+{% endblock content %}

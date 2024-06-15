@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Название" name="new_book_name">
+        <button>Сохранить</button>
+    </form>
+
+{% endblock content %}
+
+

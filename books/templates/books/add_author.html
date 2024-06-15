@@ -1,0 +1,17 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+
+    <form action="" method="POST">
+    {% csrf_token %}
+        <br>
+        <input type="text" placeholder="Имя" name="author_name">
+        <br><br>
+        <textarea name="author_bio" id="" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+            <button>Добавить</button>
+    </form>
+
+{% endblock content %}

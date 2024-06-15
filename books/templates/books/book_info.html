@@ -1,0 +1,27 @@
+{% extends 'books/base.html' %}
+
+
+
+{% block content %}
+
+   <div class="wrapper">
+
+
+    <div class="image">
+        {% if book.image.url != None %}
+             <img class="image_itself" src="   {{ book.image.url }}" alt="">
+        {% else %}
+            Нет картинки
+        {% endif %}
+
+    </div>
+    <p><h3>Название</h3> {{ book.name }}  </p>
+
+    <p> <h3>Автор</h3> {{ book.author }} </p>
+         <h2>Описание</h2>
+      <p>{{ book.description }}</p>
+   </div>
+
+
+{% endblock content %}
+

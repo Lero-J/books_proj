@@ -1,0 +1,13 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+    <br>
+<h1>Книги данной категории</h1>
+    <br>
+{% for book in books %}
+	<h2><p>{{ book.name }}</p></h2>
+    <br>
+{% endfor %}
+
+
+{% endblock content %}
